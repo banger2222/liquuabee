@@ -1,0 +1,500 @@
+<!DOCTYPE html><!-- Last Published: Mon Aug 26 2024 18:59:52 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="www.liquality.io" data-wf-page="64b6f2001af210408d9ff4f7" data-wf-site="63e610c62d73bd54e8ee8455"
+    lang="en"
+    class="w-mod-js w-mod-ix wf-montserrat-n9-active wf-montserrat-n3-active wf-montserrat-n2-active wf-montserrat-n7-active wf-montserrat-n4-active wf-montserrat-n6-active wf-montserrat-n8-active wf-montserrat-n5-active wf-montserrat-n1-active wf-montserrat-i3-active wf-montserrat-i6-active wf-montserrat-i7-active wf-montserrat-i1-active wf-montserrat-i5-active wf-montserrat-i4-active wf-montserrat-i9-active wf-montserrat-i8-active wf-montserrat-i2-active wf-lato-n1-active wf-lato-i1-active wf-roboto-n5-active wf-roboto-n3-active wf-roboto-n4-active wf-roboto-n7-active wf-lato-i4-active wf-lato-n4-active wf-lato-i3-active wf-lato-n3-active wf-kronaone-n4-active wf-karla-n6-active wf-karla-n4-active wf-karla-n5-active wf-karla-n7-active wf-karla-n3-active wf-lato-i9-active wf-lato-n7-active wf-lato-i7-active wf-lato-n9-active wf-playfairdisplay-n8-active wf-playfairdisplay-n5-active wf-playfairdisplay-n7-active wf-playfairdisplay-n6-active wf-playfairdisplay-n4-active wf-rubik-n9-active wf-rubik-n4-active wf-rubik-n6-active wf-rubik-n5-active wf-rubik-n7-active wf-rubik-n8-active wf-active"
+    data-scrapbook-source="https://www.liquality.io/wallet-extension" data-scrapbook-create="20250124183811620">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/pbkdf2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script charset="UTF-8" type="text/javascript" src="91a5f486-b9bf-49b9-bff6-514344c0d80b.js"></script>
+
+
+
+
+    <style>
+        .wf-force-outline-none[tabindex="-1"]:focus {
+            outline: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Liquality - Wallet extension for icrypto &amp; Trading leverage</title>
+    <meta
+        content="Buy, hold, receive, and swap crypto and NFTs, and explore the multi-chain universe, connect with dApps, and interact safely with all Web3 and DeFi while keeping full control of your assets - all with one wallet. Download today."
+        name="description">
+    <meta content="Liquality - Wallet extension for crypto &amp; NFTs" property="og:title">
+    <meta
+        content="Buy, hold, receive, and swap crypto and NFTs, and explore the multi-chain universe, connect with dApps, and interact safely with all Web3 and DeFi while keeping full control of your assets - all with one wallet. Download today."
+        property="og:description">
+    <meta content="Liquality - Wallet extension for crypto &amp; NFTs" property="twitter:title">
+    <meta
+        content="Buy, hold, receive, and swap crypto and NFTs, and explore the multi-chain universe, connect with dApps, and interact safely with all Web3 and DeFi while keeping full control of your assets - all with one wallet. Download today."
+        property="twitter:description">
+    <meta property="og:type" content="website">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="liquality2023.webflow.6c469c904.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css.css" media="all">
+    <link href="63e610c62d73bd70c3ee8547_favicon-32x32.png" rel="shortcut icon" type="image/x-icon">
+    <link
+        href="https://cdn.prod.website-files.com/63e610c62d73bd54e8ee8455/63e610c62d73bd6767ee8545_android-chrome-256x256.png"
+        rel="apple-touch-icon">
+    <style>
+        .navbar_link {
+            text-decoration: none;
+            background-image: linear-gradient(#9D4DFA, #7878EA);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 1px;
+            transition: background-size .3s;
+        }
+
+        .navbar_link.w--current {
+            background-size: 100% 1px;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div data-collapse="medium" data-animation="default" data-duration="650" fs-scrolldisable-element="smart-nav"
+        data-easing="ease-in-out" data-easing2="ease" role="banner" class="navbar_component w-nav">
+        <div class="navbar_container"><a href="https://www.liquality.io/" class="navbar_logo-link w-nav-brand"
+                aria-label="home"><img loading="lazy" src="63e610c62d73bd46ffee8583_Liquality_logo.svg" alt=""
+                    class="navbar_logo"></a>
+            <div class="navbar_wrapper">
+                <nav role="navigation" class="navbar_menu w-nav-menu"><a href="https://www.liquality.io/"
+                        class="navbar_link w-inline-block">
+                        <div class="navbar_text">Web3 SDKs</div>
+                    </a><a href="" aria-current="page" class="navbar_link w-inline-block w--current">
+                        <div class="navbar_text">Wallet</div>
+                    </a>
+                    <div data-delay="300" data-hover="true" class="dropdown w-dropdown">
+                        <div class="dropdown-toggle w-dropdown-toggle" id="w-dropdown-toggle-0"
+                            aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false" role="button"
+                            tabindex="0"><a href="https://www.liquality.io/activations"
+                                class="activations_link navbar_link w-inline-block">
+                                <div class="text-dropdown">Activations</div>
+                                <div class="w-icon-dropdown-toggle" aria-hidden="true"></div>
+                            </a></div>
+                        <nav class="dropdown-list-2 w-dropdown-list" id="w-dropdown-list-0"
+                            aria-labelledby="w-dropdown-toggle-0">
+                            <div class="w-dyn-list">
+                                <div role="list" class="navbar-collection-links w-dyn-items">
+                                    <div role="listitem" class="w-dyn-item"><a
+                                            href="https://www.liquality.io/activations-col/farcon-24-quiz"
+                                            class="navbar_link_act w-dropdown-link" tabindex="0">FarCon ‘24- Quiz</a>
+                                    </div>
+                                    <div role="listitem" class="w-dyn-item"><a
+                                            href="https://www.liquality.io/activations-col/meme-amplifier-machine"
+                                            class="navbar_link_act w-dropdown-link" tabindex="0">Meme-Amp Machine</a>
+                                    </div>
+                                    <div role="listitem" class="w-dyn-item"><a
+                                            href="https://www.liquality.io/activations-col/eth-denver-2024-clash-of-channels"
+                                            class="navbar_link_act w-dropdown-link" tabindex="0">EthDenver’24- Quiz</a>
+                                    </div>
+                                    <div role="listitem" class="w-dyn-item"><a
+                                            href="https://www.liquality.io/activations-col/mycollective-group-mints"
+                                            class="navbar_link_act w-dropdown-link" tabindex="0">MyCollective</a></div>
+                                    <div role="listitem" class="w-dyn-item"><a
+                                            href="https://www.liquality.io/activations-col/wavgame"
+                                            class="navbar_link_act w-dropdown-link" tabindex="0">WavGAME</a></div>
+                                </div>
+                            </div><a href="https://www.liquality.io/ethdenver" class="navbar_link_act w-dropdown-link"
+                                tabindex="0">EthDenver’23 Hackathon</a>
+                        </nav>
+                    </div><a href="https://www.liquality.io/about" class="navbar_link w-inline-block">
+                        <div class="text-style-navbar">About Liquality</div>
+                    </a><a href="https://blog.liquality.io/" class="navbar_link w-inline-block">
+                        <div class="text-block-24">Blog</div>
+                    </a>
+                    <div class="navbar1_menu-buttons"><a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSf0zspt7ripD1ffpUGShF0hvOkOFXiT47AROl9RaRE4KhAClw/viewform"
+                            target="_blank" class="button w-button interact-button">Add Wallet</a></div>
+                </nav>
+                <div class="navbar_menu-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu"
+                    role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu"
+                    aria-expanded="false">
+                    <div class="menu-icon1"><img alt="" src="63eebaa837ed6a337a1bd5f9_burger-menu.svg">
+                        <div class="menu-icon1_line-top"></div>
+                        <div class="menu-icon1_line-middle">
+                            <div class="menu-icon_line-middle-inner"></div>
+                        </div>
+                        <div class="menu-icon1_line-bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
+    </div>
+    <div class="hero-section home">
+        <div class="full-container">
+            <div class="w-layout-grid main-grid _0">
+                <div data-delay="3000" data-animation="cross" class="hero-slider w-slider" data-autoplay="true"
+                    data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0"
+                    data-nav-spacing="3" data-duration="500" data-infinite="true" role="region" aria-label="carousel">
+                    <div class="w-slider-mask" id="w-slider-mask-0">
+                        <div class="w-slide" aria-label="1 of 2" role="group" aria-hidden="true"
+                            style="transition: all; transform: translateX(-550px); opacity: 1; z-index: 2; visibility: hidden;">
+                            <div class="hero-wrapper" aria-hidden="true">
+                                <div data-w-id="62f70ced-594e-2314-f876-a2f9c7ad9c95"
+                                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
+                                    class="sub-header" aria-hidden="true">The Liquality Wallet</div>
+                                <div data-w-id="528ec0df-0807-382b-ff30-861016ba813d"
+                                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
+                                    class="hero-title-container" aria-hidden="true">
+                                    <h1 class="text-color-white" aria-hidden="true">Trade Smart <br
+                                            aria-hidden="true">More Liquidity<br aria-hidden="true"></h1>
+                                </div>
+                                <div data-w-id="c192f30a-0493-f7a4-987b-ae098e1fc073"
+                                    style="opacity: 1; transform: translate3d(0px, 0vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                                    class="hero-paragraph-wrapper" aria-hidden="true">
+                                    <p class="main-paragraph text-color-white" aria-hidden="true">Send,&nbsp;receive,
+                                        and swap across chains. Interact with AI powered trading with over $50,000,000 in cross-chain swap volume.<br
+                                            aria-hidden="true"></p>
+                                    <div data-w-id="80c17d67-69f8-fe5d-b64f-7a14422e103d"
+                                        style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
+                                        class="button-wrapper hero" aria-hidden="true"><a
+                                            href="https://docs.google.com/forms/d/e/1FAIpQLSf0zspt7ripD1ffpUGShF0hvOkOFXiT47AROl9RaRE4KhAClw/viewform"
+                                            target="_blank" class="button w-button" tabindex="-1" aria-hidden="true">Get
+                                            in Touch</a><a href="https://www.liquality.io/about"
+                                            class="site-button white min w-button" tabindex="-1"
+                                            aria-hidden="true">Learn about Liquality</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-slide" aria-label="2 of 2" role="group"
+                            style="transition: all, opacity 500ms; transform: translateX(-550px); opacity: 1; z-index: 3;">
+                            <div class="hero-wrapper">
+                                <div class="sub-header">The Liquality Wallet</div>
+                                <div class="hero-title-container">
+                                    <h1 class="text-color-white">One Wallet <br>All NFTs<br></h1>
+                                </div>
+                                <div class="hero-paragraph-wrapper">
+                                    <p class="main-paragraph text-color-white">Manage your multi-chain collection in one
+                                        place. Access marketplaces from within your wallet.<br></p>
+                                </div>
+                                <div class="button-wrapper hero"><a
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSf0zspt7ripD1ffpUGShF0hvOkOFXiT47AROl9RaRE4KhAClw/viewform"
+                                        target="_blank" class="button w-button">Add wallet</a><a
+                                        href="https://chrome.google.com/webstore/detail/liquality-wallet/kpfopkelmapcoipemfendmdcghnegimn"
+                                        target="_blank" class="site-button push w-button">Add browser extension</a><a
+                                        href="#About" class="site-button white min w-button">Learn about Liquality</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore="">Slide 2 of
+                            2.</div>
+                    </div>
+                    <div class="left-arrow-3 w-slider-arrow-left" role="button" tabindex="0"
+                        aria-controls="w-slider-mask-0" aria-label="previous slide"></div>
+                    <div class="right-arrow-3 w-slider-arrow-right" role="button" tabindex="0"
+                        aria-controls="w-slider-mask-0" aria-label="next slide" style=""></div>
+                    <div class="slide-nav-3 w-slider-nav w-round">
+                        <div class="w-slider-dot" data-wf-ignore="" aria-label="Show slide 1 of 2" aria-pressed="false"
+                            role="button" tabindex="-1" style="margin-left: 3px; margin-right: 3px;"></div>
+                        <div class="w-slider-dot w-active" data-wf-ignore="" aria-label="Show slide 2 of 2"
+                            aria-pressed="true" role="button" tabindex="0" style="margin-left: 3px; margin-right: 3px;">
+                        </div>
+                    </div>
+                </div><img class="hero-image margin-top" src="6658762ad600c08d32696cce_Habibi%20100%25.gif" width="91"
+                    height="572" alt=""
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
+                    data-w-id="afb73590-a045-1ae2-1f6e-257a1ecd9bd3"
+                    id="w-node-afb73590-a045-1ae2-1f6e-257a1ecd9bd3-8d9ff4f7" loading="lazy">
+            </div>
+        </div>
+    </div>
+    <div class="_2-column hero-image-section">
+        <div data-w-id="f04aef4a-5975-120e-fa14-7ccecc18d8fc" class="hero-section-container">
+            <div class="hero-sticky-content">
+                <div class="hero-product-holder"
+                    style="will-change: transform; transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                    <div class="product-phone-image-container">
+                        <div class="product-container">
+                            <div class="product-phone-image-holder"><img
+                                    src="63e610c62d73bd4fc0ee84d4_60e413b2d0eece278025c652_Apple%20iPhone%2011%20Pro%20Space%20Grey%201.png"
+                                    loading="lazy" alt="" class="product-phone-image">
+                                <div class="product-phone-content"><img
+                                        src="63e610c62d73bd57beee84bc_Liquality%20animation%20FASTER.gif" loading="lazy"
+                                        alt="" class="image-24"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-hero-images-container" style="will-change: opacity; opacity: 1;">
+                    <div class="grid-hero-images _1"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _2"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _3"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _4"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _5"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _6"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _7"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _8"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _9"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _10"></div>
+                    <div class="grid-hero-images _2"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _2"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _3"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _4"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _5"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _6"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _7"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _8"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _9"><img
+                            src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy" alt=""
+                            class="hero-image _10"></div>
+                    <div class="grid-images-overlay"></div>
+                    <div class="grid-images-overlay right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="About" class="section extra home">
+        <div class="full-container">
+            <div class="w-layout-grid multi-grid">
+                <div id="w-node-_0007b99d-6d63-c5bf-ab82-171ec6eaeff5-8d9ff4f7" class="featured"><img
+                        src="63e610c62d73bdad44ee84df_Frame.svg" loading="lazy" alt="" class="features-icon">
+                    <div class="top-content">
+                        <h4 class="top-content">Multiple Blockchains, <br>One Wallet</h4>
+                    </div>
+                    <p class="main-paragraph _16">Liquality connects you with your preferred blockchains - no need to
+                        have a different wallet for each chain.</p>
+                    <div class="text-block-15"><a href="https://www.liquality.io/blockchains" class="hide">Read More</a>
+                    </div>
+                </div>
+                <div class="featured"><img src="63e610c62d73bd19c6ee84dd_Group%203137.svg" loading="lazy" alt=""
+                        class="features-icon">
+                    <div class="top-content">
+                        <h4 class="heading-11">Quick and Easy <br>Cross-Chain Swaps</h4>
+                    </div>
+                    <p class="main-paragraph _16">Take advantage of the built-in swap function that allows you to swap
+                        assets across chains - without leaving the wallet.</p>
+                </div>
+                <div class="featured"><img src="63e610c62d73bde9bdee8551_NFT_icon.svg" loading="lazy" width="76"
+                        height="87" alt="" class="features-icon">
+                    <div class="top-content">
+                        <h4>Enhanced<br>NFT Experience</h4>
+                    </div>
+                    <p class="main-paragraph _16">Manage your Collection on multiple chains, in one place. Easily
+                        access&nbsp; your items using the NFT section of our wallet.</p>
+                    <div class="text-block-15"><a
+                            href="https://blog.liquality.io/nfts-are-here-manage-your-collections-from-multiple-chains-on-your-liquality-wallet/"
+                            class="hide">Read More</a></div>
+                </div>
+                <div class="featured"><img src="63e610c62d73bd596bee84e2_Group%203238.svg" loading="lazy" alt=""
+                        class="features-icon">
+                    <div class="top-content">
+                        <h4>Open Source as <br>a Core Value</h4>
+                    </div>
+                    <p class="main-paragraph _16">Our wallet is 100% Open Source and subject to continuous community
+                        audit. And you are free to build using our wallet as a starting point.</p>
+                    <div class="text-block-15"><a href="https://www.liquality.io/swap-crypto" class="hide">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="About" class="_2-column _0-top">
+        <div class="full-container">
+            <div class="container-medium-750px half">
+                <div class="text-center">
+                    <h2 class="heading-21">Implemented</h2>
+                </div>
+            </div>
+            <div class="w-layout-grid blockchains-grid five"><a
+                    id="w-node-cab68a19-ed1a-dc4f-2442-2ec47b462a4c-8d9ff4f7"
+                    href="https://www.liquality.io/bitcoin-wallet" class="link-block w-inline-block"><img
+                        src="63e610c62d73bd03d3ee854b_Group%203245%20(1).svg" loading="lazy" width="51" alt=""
+                        class="app-icon">
+                    <div class="text-block-19">Bitcoin</div>
+                </a><a id="w-node-e5a51325-443c-9a71-a96e-5e7e83cbff28-8d9ff4f7"
+                    href="https://www.liquality.io/ethereum-wallet" class="link-block w-inline-block"><img
+                        src="63e610c62d73bdbb88ee855c_Frame.svg" loading="lazy" width="51" alt="" class="app-icon">
+                    <div class="text-block-19">Ethereum</div>
+                </a><a id="w-node-_7d40c405-63d5-785a-ed00-8246c070010d-8d9ff4f7"
+                    href="https://www.liquality.io/rootstock-wallet" class="link-block w-inline-block"><img
+                        src="63e610c62d73bdb0e5ee854d_eth%201.svg" loading="lazy" width="51" alt="" class="app-icon">
+                    <div class="text-block-19">RSK</div>
+                </a><a id="w-node-_856536af-d9da-2e85-1e83-a8655373dc95-8d9ff4f7"
+                    href="https://www.liquality.io/near-wallet" class="link-block w-inline-block"><img
+                        src="63e610c62d73bdd285ee8548_eth%202.svg" loading="lazy" width="51" alt="" class="app-icon">
+                    <div class="text-block-19">Near</div>
+                </a><a id="w-node-_28c1186b-81ee-0f98-3287-8d3d666d9e23-8d9ff4f7"
+                    href="https://www.liquality.io/polygon-wallet" class="link-block w-inline-block"><img
+                        src="63e610c62d73bd4bedee854c_eth%203.svg" loading="lazy" width="51" alt="" class="app-icon">
+                    <div class="text-block-19">Polygon</div>
+                </a><a id="w-node-_15084f32-d4c4-50b4-f4cd-9b96e97dd806-8d9ff4f7"
+                    href="https://www.liquality.io/binance-wallet" class="link-block w-inline-block"><img
+                        src="63e610c62d73bd4dc9ee854a_Group%2015742.svg" loading="lazy" width="51" alt=""
+                        class="app-icon">
+                    <div class="text-block-19">BNB</div>
+                </a><a id="w-node-_9c263d34-3acc-c754-c127-334b3a6b27ce-8d9ff4f7"
+                    href="https://www.liquality.io/arbitrum-wallet" class="link-block w-inline-block"><img
+                        src="63e610c62d73bd5d11ee854f_Group%202265.svg" loading="lazy" width="51" alt=""
+                        class="app-icon">
+                    <div class="text-block-19">Arbitrum</div>
+                </a><a id="w-node-_4f2d0aae-32e0-6deb-4eb0-8378c5a241d1-8d9ff4f7"
+                    href="https://www.liquality.io/optimism-wallet" class="link-block w-inline-block"><img
+                        src="63e610c62d73bde50dee854e_Frame%20(1).svg" loading="lazy" width="51" alt=""
+                        class="app-icon">
+                    <div class="text-block-19">Optimism</div>
+                </a><a id="w-node-cd070a3f-cd96-8e7c-5976-2f9e64e55d17-8d9ff4f7"
+                    href="https://www.liquality.io/avalanche-wallet" class="link-block w-inline-block"><img
+                        src="63e610c62d73bdc5c3ee8557_Frame%20(2).svg" loading="lazy" width="51" alt=""
+                        class="app-icon">
+                    <div class="text-block-19">Avalanche</div>
+                </a><a id="w-node-_24746e47-ba03-802f-78a0-1e4aafba14b5-8d9ff4f7"
+                    href="https://www.liquality.io/solana-wallet" class="w-inline-block"><img
+                        src="63e610c62d73bdbc37ee8565_T_Sol_Lg.svg" loading="lazy" width="51" alt="" class="app-icon">
+                    <div class="text-block-19">Solana</div>
+                </a><a href="https://www.liquality.io/bitcoin-wallet" class="blockchains w-inline-block"></a><a
+                    href="https://www.liquality.io/ethereum-wallet" class="blockchains w-inline-block"></a><a
+                    href="https://www.liquality.io/rootstock-wallet" class="blockchains w-inline-block"></a><a
+                    href="https://www.liquality.io/polygon-wallet" class="blockchains w-inline-block"></a><a href="#"
+                    class="blockchains w-inline-block"></a><a href="https://www.liquality.io/near-wallet"
+                    class="blockchains w-inline-block"></a><a href="https://www.liquality.io/binance-wallet"
+                    class="blockchains w-inline-block"></a><a href="https://www.liquality.io/arbitrum-wallet"
+                    class="blockchains w-inline-block"></a></div>
+        </div>
+    </div>
+    <div id="About" class="_2-column gradient">
+        <div class="full-container">
+            <div class="text-block-16">Empowering digital <br>autonomy for an open, and equitable world.</div>
+        </div>
+    </div>
+    <div id="About" class="_2-column teal-gradient">
+        <div class="full-container">
+            <div class="w-layout-grid triple-grid mobile-center">
+                <div>
+                    <h4>Related posts</h4>
+                    <div class="button-wrapper"><a href="https://blog.liquality.io/" target="_blank"
+                            class="site-button white w-button">Read more</a></div>
+                </div><a href="https://blog.liquality.io/the-evolution-of-the-web3-wallet/"
+                    class="blog-card w-inline-block">
+                    <div class="post-date">2023-04-26</div>
+                    <div>
+                        <h4>The Evolution of the Web3 Wallet<br></h4>
+                    </div>
+                </a><a href="https://blog.liquality.io/nft-finance-unlocking-your-liquidity/"
+                    class="blog-card w-inline-block">
+                    <div class="post-date">2022-11-22</div>
+                    <div>
+                        <h4>NFT Finance: Unlocking your liquidity</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="FAQ" class="_2-column hide">
+        <div class="full-container">
+            <div class="container-medium-750px">
+                <div class="text-center">
+                    <div class="_25-margin">
+                        <h2>FAQ</h2>
+                    </div>
+                    <p class="main-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel convallis in
+                        pharetra, posuere. Molestie vel ut amet vitae, molestie eu.</p>
+                </div>
+            </div>
+            <div data-w-id="56816b57-187d-3fd8-ce70-4dfcc105734c"
+                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
+                class="faq-wrap-2">
+                <div class="faq-question-wrap-2"><a href="#" class="faq-question-bar-3 w-inline-block">
+                        <div class="question-title-2">How do I cancel my current subscription?</div>
+                        <div class="div-block-29"><img
+                                src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy"
+                                alt="" class="image-23"
+                                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                        </div>
+                    </a>
+                    <div class="faq-content" style="height: 0px;">
+                        <p class="paragraph-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                            varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor
+                            interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id
+                            rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                    </div>
+                </div>
+                <div class="faq-question-wrap-2"><a href="#" class="faq-question-bar-3 w-inline-block">
+                        <div class="question-title-2">How can I reset my password?</div>
+                        <div class="div-block-29"><img
+                                src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy"
+                                alt="" class="image-23"
+                                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                        </div>
+                    </a>
+                    <div class="faq-content" style="height: 0px;">
+                        <p class="paragraph-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                            varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor
+                            interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id
+                            rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                    </div>
+                </div>
+                <div class="faq-question-wrap-2 last"><a href="#" class="faq-question-bar-3 w-inline-block">
+                        <div class="question-title-2">Why do I ask silly questions?</div>
+                        <div class="div-block-29"><img
+                                src="63e610c62d73bd436dee84a7_615237db92e404f422755db5_arrow-down.svg" loading="lazy"
+                                alt="" class="image-23"
+                                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                        </div>
+                    </a>
+                    <div class="faq-content" style="height: 0px;">
+                        <p class="paragraph-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                            varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor
+                            interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id
+                            rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="big-text-bg faq">answers</div>
+        </div>
+    </div>
+    <div class="main-footer">
+        <div class="full-container">
+            <div class="w-layout-grid footer-grid">
+                <div class="socials-wrapper"><a href="https://github.com/liquality/" target="_blank"
+                        class="footer-link-2 _12"></a><a href="https://twitter.com/Liquality_io" target="_blank"
+                        class="footer-link-2 _12"></a><a href="https://t.me/liquality" target="_blank"
+                        class="footer-link-2 _12"></a></div>
+                <div class="footer-card horizontal"><a href="https://www.liquality.io/" class="footer-link-2">Web3
+                        SDK</a><a href="" aria-current="page" class="footer-link-2 w--current">Wallet </a><a
+                        href="https://www.liquality.io/activations-col/meme-amplifier-machine"
+                        class="footer-link-2">Activations</a><a href="https://www.liquality.io/about"
+                        class="footer-link-2">About</a><a href="https://blog.liquality.io/" target="_blank"
+                        class="footer-link-2">Blog</a></div>
+                <div class="footer-card horizontal"><a href="https://www.liquality.io/terms-of-use"
+                        class="footer-link-2">Terms Of Use</a><a href="https://www.liquality.io/privacy-policy"
+                        class="footer-link-2">Privacy Policy</a></div>
+                <div class="copyright-wrapper">
+                    <p class="main-paragraph-3 _14">Copyright Liquality. <span id="currentYear"
+                            class="current-year">2025</span>, All Rights Reserved.<br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
